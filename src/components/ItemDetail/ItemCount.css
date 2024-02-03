@@ -1,0 +1,20 @@
+.btn{
+    background-color: rgb(255, 255, 255);
+    border: solid 1.5px black;
+}
+.btn:hover{
+    background-color: rgb(158, 158, 158);
+    border: solid 1.5px black;
+}
+.info{
+    margin: auto 40px;
+}
+.buy-btn{
+    margin: 15px auto;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    background: linear-gradient(40deg, #ff3434, #ffa5a5);
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,28 @@
+.card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:  column;
+    background-color: rgb(255, 211, 152);
+    padding: 20px;
+    border-radius: 30px;
+    margin: 15px auto;
+}
+.card-img{
+    width: auto;
+    height: 350px;
+}
+.item-name{
+    font-size: 24px;
+    color: #695336;
+}
+.item-price{
+    font-size: x-large;
+    color: brown;
+}
+.buy{
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(255, 167, 53);
+    padding: 10px 40px;
+}

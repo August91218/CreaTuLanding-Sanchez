@@ -1,0 +1,17 @@
+.item-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px;
+}
+.buy{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+.buy:hover{
+    filter: grayscale(40%);
+    transform: scale(1.05);
+    
+}

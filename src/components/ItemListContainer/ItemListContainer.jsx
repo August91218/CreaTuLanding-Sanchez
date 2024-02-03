@@ -1,7 +1,19 @@
+import { useEffect, useState } from "react"
+import { getProducts } from "../../data/products";
+import ItemList from "../ItemList/itemList";
+
 function ItemListContainer({ mensaje }) {
+    const [products, setProducts] = useState([]);
+    
+    useEffect(() => {
+        getProducts()
+            .then(response => setProducts(response))
+            .catch(error => console.log(error))
+    }, [])
+
     return (
         <>
-            <h2 className="d-flex justify-content-center align-center">{mensaje}</h2>
+        {products == "" ? <h4>Cargando..</h4> : <ItemList products={products}/>}
         </>
     )
 }
