@@ -17,7 +17,16 @@ function NavBar() {
                     <Link className="nav-link text-light" to="/products">Productos</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link text-light" href="#">Comprar</a>
+                    <Link className="nav-link text-light" to="/category/video">Video</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link text-light" to="/category/gabinete">Gabinete</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link text-light" to="/category/procesador">Procesador</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link text-light" to="/category/memoria">Memoria</Link>
                 </li>
                 <li className="nav-item d-flex align-center text-light">
                     <CartWidget/>

@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react"
-import { getProducts } from "../../data/products";
+import { getProducts, getProductsByCategory } from "../../data/products";
 import ItemList from "../ItemList/itemList";
+import { useParams } from "react-router";
 
-function ItemListContainer({ mensaje }) {
+function ItemListContainer() {
     const [products, setProducts] = useState([]);
-    
+
+    const {categoryID} = useParams()
     useEffect(() => {
-        getProducts()
+        const func = categoryID ? getProductsByCategory : getProducts;
+
+        func(categoryID)
             .then(response => setProducts(response))
             .catch(error => console.log(error))
-    }, [])
+    }, [categoryID])
 
     return (
         <>

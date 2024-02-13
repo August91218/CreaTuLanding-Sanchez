@@ -1,20 +1,30 @@
 import React from 'react'
 import './ItemDetail.css'
 import ItemCount from './ItemCount'
-const ItemDetail = ({ name, image, price, stock, description }) => {
+const ItemDetail = ({ name, image, price, stock, description, categoria }) => {
+    function agrandarPrimeraLetra(texto) {
+        let miArray = texto.split("")
+        let fl = miArray[0].toUpperCase();
+        console.log(fl);
+        miArray[0] = fl
+        texto = miArray.join("")
+        return texto;
+    }
+
     return (
-        image ?<>
+        image ? <>
             <div className="card-detail">
-                <img src={image} alt="Product Image" className='img'/>
+                <img src={image} alt="Product Image" className='img' />
                 <div className="detail">
                     <div className="name">{name}</div>
+                    <p className="price">Categoría: {agrandarPrimeraLetra(categoria)}</p>
                     <p className="price">${price}</p>
                     <span className="stock">Stock: {stock}</span>
                     <p>{description}</p>
-                    <ItemCount stock={stock}/>
+                    <ItemCount stock={stock} />
                 </div>
             </div>
-        </>:<h4>Cargando...</h4> 
+        </> : <h4>Cargando...</h4>
     )
 }
 export default ItemDetail
