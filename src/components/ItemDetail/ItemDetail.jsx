@@ -24,7 +24,7 @@ const ItemDetail = ({ name, image, price, stock, description, categoria }) => {
                     <ItemCount stock={stock} />
                 </div>
             </div>
-        </> : <h4>Cargando...</h4>
+        </> : <div className="loader"></div>
     )
 }
 export default ItemDetail

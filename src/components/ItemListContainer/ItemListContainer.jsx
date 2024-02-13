@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { getProducts, getProductsByCategory } from "../../data/products";
 import ItemList from "../ItemList/itemList";
 import { useParams } from "react-router";
-
+import './ItemListContainer.css'
 function ItemListContainer() {
     const [products, setProducts] = useState([]);
 
@@ -17,7 +17,7 @@ function ItemListContainer() {
 
     return (
         <>
-        {products == "" ? <h4>Cargando..</h4> : <ItemList products={products}/>}
+        {products == "" ? <div className="loader"></div> : <ItemList products={products}/>}
         </>
     )
 }
