@@ -1,0 +1,36 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: white;
+    
+  }
+  .dropdown-content {
+    
+    display: none;
+    position: absolute;
+    background-color: #8b0000;
+    min-width: 160px;
+    padding: 10px;
+    margin-bottom: 80px;
+    z-index: 1;
+    &.gab{
+      top: 80px;
+      z-index: 2;
+    }
+    &.proc{
+      top: 130px;
+      z-index: 3;
+    }
+    &.mem{
+      top: 180px;
+      z-index: 4;
+    }
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    transition: 0.2s ease-in-out;
+  }
+  .dropdown-content:hover{
+    background-color: rgb(255, 48, 48);
+  }

@@ -6,7 +6,7 @@ const ItemCount = ({ stock }) => {
 
     function add(event) {
         if (count >= stock) {
-            event.preventdefault()
+            event.preventDefault()
 
         } else {
             setCount(count + 1)
@@ -23,12 +23,11 @@ const ItemCount = ({ stock }) => {
     return (
         <>
             <div className="buy-count">
-                <button className="btn" onClick={add}>+</button>
-                <span className='info'>{count}</span>
                 <button className="btn" onClick={res}>-</button>
+                <span className='info'>{count}</span>
+                <button className="btn" onClick={add}>+</button>
             </div>
             <br />
-            <Link to='/checkout' className='buy-btn'>Agregar al carrito</Link>
         </>
     )
 }

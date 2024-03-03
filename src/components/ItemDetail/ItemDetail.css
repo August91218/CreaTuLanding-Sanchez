@@ -2,17 +2,18 @@
     background-color: rgb(255, 150, 124);
     display: flex;
     justify-content: center;
-    align-items: center;
     margin: 20px auto;
     width: 900px;
     border-radius: 30px;
+    height: 100%;
 }
 .img{
     max-width: 450px;
     height: auto;
+    padding: 30px;
 }
 .name{
-    font-size: 2.5em;
+    font-size: 1.5em;
 }
 .price{
     font-size: 1.5em;
@@ -24,3 +25,76 @@ h4{
     justify-content: center;
     align-items: center;
 }
+
+/*LOADER*/
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 65px;
+    aspect-ratio: 1;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: 80px;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px inset #000000;
+    animation: l4 2.5s infinite;
+  }
+  .loader:after {
+    animation-delay: -1.25s;
+  }
+  .detail{
+    padding-bottom: 40px;
+  }
+  @keyframes l4 {
+    0% {
+      inset: 0 35px 35px 0;
+    }
+    12.5% {
+      inset: 0 35px 0 0;
+    }
+    25% {
+      inset: 35px 35px 0 0;
+    }
+    37.5% {
+      inset: 35px 0 0 0;
+    }
+    50% {
+      inset: 35px 0 0 35px;
+    }
+    62.5% {
+      inset: 0 0 0 35px;
+    }
+    75% {
+      inset: 0 0 35px 35px;
+    }
+    87.5% {
+      inset: 0 0 35px 0;
+    }
+    100% {
+      inset: 0 35px 35px 0;
+    }
+  }
+
+  .back-btn{
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+    margin: 40px;
+    background-color: rgb(158, 37, 0);
+    position: relative;
+    top: 0px;
+    left: -150px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+  }
