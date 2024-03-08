@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router';
-import { useUserContext } from '../../context/ContextProvider';
+import { useUserContext } from '../../../context/ContextProvider';
 import { useState } from 'react';
-import ItemList from '../ItemList/itemList';
+import ItemList from '../ItemList/ItemList';
 
 const ItemFiltered = () => {
     const { getProducts, products } = useUserContext();

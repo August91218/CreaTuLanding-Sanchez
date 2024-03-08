@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import ItemList from "../ItemList/itemList";
+import ItemList from './ItemList/ItemList'
 import './ItemListContainer.css'
 import { useUserContext } from "../../context/ContextProvider";
 function ItemListContainer() {

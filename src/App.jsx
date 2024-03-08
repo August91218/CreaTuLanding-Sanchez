@@ -1,9 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import CartItem from "./components/Cart/CartItem";
 import { ContextProvider } from "./context/ContextProvider";
-import ItemFiltered from "./components/ItemFiltered/ItemFiltered";
+import ItemFiltered from "./components/ItemListContainer/ItemFiltered/ItemFiltered";
+import CheckoutForm from "./components/Cart/Checkout/CheckoutForm";
 
 function App() {
 
@@ -18,7 +20,9 @@ function App() {
           <Route path="/category/*" element={<ItemListContainer />} />
           <Route path="/" element={<h4>Bienvenidos a Tienda gamers!</h4>} />
           <Route path="*" element={<h4>Error 404 not found</h4>} />
+          <Route path="/cart" element={<CartItem />} />
           <Route path="/product/:id" element={<ItemDetailContainer />} />
+          <Route path="/checkout-form" element={<CheckoutForm />}></Route>
         </Routes>
       </ContextProvider>
     </>

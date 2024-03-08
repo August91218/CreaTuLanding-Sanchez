@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
 import "./itemCount.css"
-import { Link } from 'react-router-dom'
-const ItemCount = ({ stock }) => {
-    const [count, setCount] = useState(0)
 
+const ItemCount = ({ stock , count, setCount}) => {
+    
     function add(event) {
         if (count >= stock) {
             event.preventDefault()
@@ -12,18 +10,17 @@ const ItemCount = ({ stock }) => {
             setCount(count + 1)
         }
     }
-    function res(value) {
-        if (count <= 0) {
-            setCount(0);
+    function res() {
+        if (count <= 1) {
+            setCount(1);
         } else {
             setCount(count - 1)
-
         }
     }
     return (
         <>
             <div className="buy-count">
-                <button className="btn" onClick={res}>-</button>
+                <button className="btn" onClick={res} >-</button>
                 <span className='info'>{count}</span>
                 <button className="btn" onClick={add}>+</button>
             </div>
